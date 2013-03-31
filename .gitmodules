@@ -120,3 +120,6 @@
 [submodule "packs/live/snufkon-pack/lib/helm"]
 	path = packs/live/snufkon-pack/lib/helm
 	url = https://github.com/emacs-helm/helm.git
+[submodule "packs/live/snufkon-pack/lib/helm-ls-git"]
+	path = packs/live/snufkon-pack/lib/helm-ls-git
+	url = https://github.com/emacs-helm/helm-ls-git.git
