@@ -10,5 +10,6 @@
 (live-load-config-file "gauche-conf.el")
 (live-load-config-file "blind-conf.el")
 (live-load-config-file "auto-complete-conf.el")
+(live-load-config-file "paredit-conf.el")
 (live-load-config-file "misc.el")
 (live-load-config-file "bindings.el")
