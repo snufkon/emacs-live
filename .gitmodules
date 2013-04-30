@@ -24,7 +24,7 @@
         ignore = untracked
 [submodule "packs/dev/power-pack/vendor/submodules/undo-tree"]
         path = packs/dev/power-pack/vendor/submodules/undo-tree
-        url = http://www.dr-qubit.org/git/undo-tree.git
+        url = git://github.com/emacsmirror/undo-tree.git
         ignore = untracked
 [submodule "packs/dev/lang-pack/vendor/submodules/actionscript-mode"]
         path = packs/dev/lang-pack/vendor/submodules/actionscript-mode
@@ -126,3 +126,6 @@
 [submodule "packs/live/snufkon-pack/lib/blind"]
 	path = packs/live/snufkon-pack/lib/blind
 	url = https://github.com/snufkon/blind.git
+[submodule "packs/dev/org-pack/vendor/submodules/org-mode"]
+	path = packs/dev/org-pack/vendor/submodules/org-mode
+	url = git://orgmode.org/org-mode.git
