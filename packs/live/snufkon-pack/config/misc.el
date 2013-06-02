@@ -39,3 +39,10 @@
   (when (one-window-p)
     (split-window-horizontally))
   (other-window 1))
+
+;;; バッファ自動再読み込み
+(global-auto-revert-mode 1)
+
+;;; 使い捨てファイル作成用
+(require 'open-junk-file)
+(setq open-junk-file-format "~/Code/junk/%Y-%m/%Y-%m-%d-%H%M%S.")

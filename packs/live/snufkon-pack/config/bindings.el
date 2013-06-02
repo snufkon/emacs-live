@@ -31,3 +31,6 @@
 
 ;; paredit-mode
 (define-key paredit-mode-map (kbd "M-[") 'comment-sexp)
+
+;; open-junk-file
+(global-set-key (kbd "C-x j") 'open-junk-file)
