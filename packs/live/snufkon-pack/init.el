@@ -13,5 +13,6 @@
 (live-load-config-file "paredit-conf.el")
 (live-load-config-file "clojure-conf.el")
 (live-load-config-file "nrepl-conf.el")
+(live-load-config-file "yasnippet-conf.el")
 (live-load-config-file "misc.el")
 (live-load-config-file "bindings.el")
