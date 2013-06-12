@@ -6,3 +6,12 @@
 (setq scheme-program-name "gosh -i")
 (autoload 'scheme-mode "cmuscheme" "Major mode for Scheme." t)
 (autoload 'run-scheme "cmuscheme" "Run an inferior Scheme process." t)
+
+;;; gauche を再起動する
+(defun reload-scheme ()
+  (interactive)
+  (if (get-process "scheme")
+      (delete-process "*scheme*"))
+  (if (get-buffer "*scheme*")
+      (kill-buffer "*scheme*"))
+  (run-scheme scheme-program-name))
