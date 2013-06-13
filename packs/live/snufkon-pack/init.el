@@ -4,6 +4,7 @@
 ;; See README for more information.
 
 ;; Load config
+(live-load-config-file "package-conf.el")
 (live-load-config-file "font-conf.el")
 (live-load-config-file "key-chord-conf.el")
 (live-load-config-file "helm-conf.el")
@@ -14,5 +15,6 @@
 (live-load-config-file "clojure-conf.el")
 (live-load-config-file "nrepl-conf.el")
 (live-load-config-file "yasnippet-conf.el")
+(live-load-config-file "popwin-conf.el")
 (live-load-config-file "misc.el")
 (live-load-config-file "bindings.el")
