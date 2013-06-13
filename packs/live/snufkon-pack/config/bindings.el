@@ -7,6 +7,10 @@
 ;; (global-set-key (kbd "C-c h") 'helm-mini)
 (global-set-key (kbd "C-x b") 'helm-mini)
 (global-set-key (kbd "C-x C-b") 'helm-mini)
+(global-set-key (kbd "C-x C-g") 'helm-ls-git-ls)
+(global-set-key (kbd "C-:") 'helm-do-grep)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-;") 'helm-git-project)
 
 ;;; ウィンドウ最大、最小化
 (key-chord-define-global "89" 'mac-toggle-max-window)
