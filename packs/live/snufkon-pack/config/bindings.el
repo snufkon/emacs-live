@@ -20,8 +20,8 @@
 
 
 ;;; ウィンドウの透過率を増加、減少
-(define-key global-map (kbd "C-.") 'blind-up)
-(define-key global-map (kbd "C-,") 'blind-down)
+(define-key global-map (kbd "C-s-.") 'blind-up)
+(define-key global-map (kbd "C-s-,") 'blind-down)
 
 ;;; expand-region
 (global-set-key (kbd "C-@") 'er/expand-region)
@@ -57,3 +57,8 @@
 (define-key yas-minor-mode-map (kbd "C-x y n") 'yas-new-snippet)
 ;; 既存スニペットを閲覧・編集する
 (define-key yas-minor-mode-map (kbd "C-x y v") 'yas-visit-snippet-file)
+
+;;; bm.el
+(global-set-key (kbd "M-@") 'bm-toggle)
+(global-set-key (kbd "C-.") 'bm-next)
+(global-set-key (kbd "C-,") 'bm-previous)
