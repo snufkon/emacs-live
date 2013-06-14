@@ -1,10 +1,53 @@
 (live-add-pack-lib "helm")
 (live-add-pack-lib "helm-ls-git")
+(live-add-pack-lib "color-moccur-20120811.2127")
+(live-add-pack-lib "helm-c-moccur-20130216.1417")
 
 (require 'helm-config)
 (require 'helm-ls-git)
+(require 'color-moccur)
+(require 'moccur-edit)
+(require 'helm-c-moccur)
 
 ;; (helm-mode 1)
+
+;;; helm-c-moccur --------------------------------------------------------------
+;;; 参考: https://github.com/shishi/.emacs.d/blob/master/inits/09-helm-c-moccur.el
+
+;;; ベースとなる color-moccur の設定
+;;; スペース区切りで AND 検索
+(setq moccur-split-word t)
+
+;;; ディレクトリ検索時、除外するファイル
+(add-to-list 'dmoccur-exclusion-mask "\\.DS_Store")
+(add-to-list 'dmoccur-exclusion-mask "^#.+#$")
+
+;; Migemo が利用できる環境であれば、利用する
+(when (and (executable-find "cmigemo")
+           (require 'migemo nil t))
+  (setq moccur-use-migemo t))
+
+;;; moccur-edit-finish-edit と同時にファイルに保存する
+(defadvice moccur-edit-change-file
+  (after save-after-moccur-edit-buffer activate)
+  (save-buffer))
+
+
+(setq helm-c-moccur-helm-idle-delay 0.1)
+
+;;; バッファ情報をハイライト
+(setq helm-c-moccur-higligt-info-line-flag t)
+
+;; 現在選択中の候補の位置を他のwindowに表示する
+(setq helm-c-moccur-enable-auto-look-flag t)
+
+;; `helm-c-moccur-occur-by-moccur の起動時にポイントの位置の単語を初期パターンにする
+(setq helm-c-moccur-enable-initial-pattern t)
+
+;;; キーバインドの割当(好みに合わせて設定してください)
+(define-key global-map (kbd "M-o") 'helm-c-moccur-occur-by-moccur) ;バッファ内検索
+(define-key global-map (kbd "C-M-o") 'helm-c-moccur-dmoccur) ;ディレクトリ
+(define-key isearch-mode-map (kbd "M-o") 'helm-c-moccur-from-isearch)
 
 
 ;;; helm-git-project -----------------------------------------------------------
