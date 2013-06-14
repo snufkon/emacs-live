@@ -44,11 +44,17 @@
 ;; `helm-c-moccur-occur-by-moccur の起動時にポイントの位置の単語を初期パターンにする
 (setq helm-c-moccur-enable-initial-pattern t)
 
-;;; キーバインドの割当(好みに合わせて設定してください)
-(define-key global-map (kbd "M-o") 'helm-c-moccur-occur-by-moccur) ;バッファ内検索
-(define-key global-map (kbd "C-M-o") 'helm-c-moccur-dmoccur) ;ディレクトリ
-(define-key isearch-mode-map (kbd "M-o") 'helm-c-moccur-from-isearch)
-
+(setq helm-c-source-dmoccur
+      '((name . "DMoccur")
+        (candidates . helm-c-moccur-dmoccur-get-candidates)
+        (action . (("Goto line" . helm-c-moccur-dmoccur-goto-line)))
+        (persistent-action . helm-c-moccur-dmoccur-persistent-action)
+        (match . (identity))
+        (requires-pattern . 3)
+        (init . helm-c-moccur-initialize)
+        (cleanup . helm-c-moccur-clean-up)
+        (delayed)
+        (volatile)))
 
 ;;; helm-git-project -----------------------------------------------------------
 ;;; 参考: http://d.hatena.ne.jp/syohex/20121207/1354885367
