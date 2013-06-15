@@ -16,5 +16,8 @@
 (live-load-config-file "nrepl-conf.el")
 (live-load-config-file "yasnippet-conf.el")
 (live-load-config-file "popwin-conf.el")
+(live-load-config-file "all-conf.el")
+(live-load-config-file "bm-conf.el")
+(live-load-config-file "wgrep-conf.el")
 (live-load-config-file "misc.el")
 (live-load-config-file "bindings.el")
