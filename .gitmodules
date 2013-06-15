@@ -132,3 +132,6 @@
 [submodule "packs/live/snufkon-pack/lib/wgrep"]
 	path = packs/live/snufkon-pack/lib/wgrep
 	url = https://github.com/mhayashi1120/Emacs-wgrep.git
+[submodule "packs/live/snufkon-pack/lib/helm-descbinds"]
+	path = packs/live/snufkon-pack/lib/helm-descbinds
+	url = https://github.com/emacs-helm/helm-descbinds.git
