@@ -129,3 +129,6 @@
 [submodule "packs/dev/org-pack/vendor/submodules/org-mode"]
 	path = packs/dev/org-pack/vendor/submodules/org-mode
 	url = git://orgmode.org/org-mode.git
+[submodule "packs/live/snufkon-pack/lib/wgrep"]
+	path = packs/live/snufkon-pack/lib/wgrep
+	url = https://github.com/mhayashi1120/Emacs-wgrep.git
