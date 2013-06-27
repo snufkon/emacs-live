@@ -14,7 +14,7 @@
 (define-key global-map (kbd "M-o") 'helm-c-moccur-occur-by-moccur)
 (define-key global-map (kbd "C-M-o") 'helm-c-moccur-dmoccur)
 (define-key isearch-mode-map (kbd "M-o") 'helm-c-moccur-from-isearch)
-
+(key-chord-define-global "df" 'describe-bindings)
 
 ;;; ウィンドウ最大、最小化
 (key-chord-define-global "89" 'mac-toggle-max-window)

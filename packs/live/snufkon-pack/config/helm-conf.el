@@ -1,15 +1,19 @@
 (live-add-pack-lib "helm")
 (live-add-pack-lib "helm-ls-git")
+(live-add-pack-lib "helm-descbinds")
 (live-add-pack-lib "color-moccur-20120811.2127")
 (live-add-pack-lib "helm-c-moccur-20130216.1417")
 
 (require 'helm-config)
 (require 'helm-ls-git)
+(require 'helm-descbinds)
 (require 'color-moccur)
 (require 'moccur-edit)
 (require 'helm-c-moccur)
 
-;; (helm-mode 1)
+
+;;; helm-descbinds-mode --------------------------------------------------------
+ (helm-descbinds-mode)
 
 ;;; helm-c-moccur --------------------------------------------------------------
 ;;; 参考: https://github.com/shishi/.emacs.d/blob/master/inits/09-helm-c-moccur.el
