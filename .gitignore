@@ -24,3 +24,7 @@ tramp
 tmp/*
 .smex-items
 swank/*
+
+.bm-repository
+.mc-lists.el
+packs/live/snufkon-pack/lib/archives/
