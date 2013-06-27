@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: dpo
+# key: dpo
+# --
+(println "${1:variable}: " $1)
