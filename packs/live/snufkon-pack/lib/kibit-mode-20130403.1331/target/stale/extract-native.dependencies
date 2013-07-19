@@ -1,0 +1,1 @@
+([:dependencies ([org.clojure/clojure "1.4.0"] [jonase/kibit "0.0.3"] [org.clojure/tools.nrepl "0.2.3"] [clojure-complete/clojure-complete "0.2.3"] [midje/midje "1.4.0"] [lein-midje/lein-midje "2.0.0-SNAPSHOT"])])
