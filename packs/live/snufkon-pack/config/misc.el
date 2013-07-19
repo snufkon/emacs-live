@@ -1,6 +1,3 @@
-
-
-
 ;;; モードラインに情報を追加
 ;; 時間を表示
 (display-time-mode 1)
@@ -10,7 +7,7 @@
 (when (or
        (eq window-system 'mac)
        (eq window-system 'ns))
-  (set-frame-parameter nil 'alpha 80))
+  (set-frame-parameter nil 'alpha 90))
 
 ;;; ウィンドウ最大化用トグル(Mac用)
 (defun mac-toggle-max-window ()
@@ -74,3 +71,10 @@
           (set-window-buffer (next-window) next-win-buffer)
           (select-window first-win)
           (if this-win-2nd (other-window 1))))))
+
+
+;; 参考: http://d.hatena.ne.jp/CortYuming/20130622/p1
+;; server start for emacs-client
+(require 'server)
+(unless (server-running-p)
+  (server-start))

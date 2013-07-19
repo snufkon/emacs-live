@@ -1,4 +1,3 @@
-
 ;;; テキストのスケールを拡大、縮小
 (define-key global-map (kbd "C-+") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
@@ -66,3 +65,10 @@
 (global-set-key (kbd "M-@") 'bm-toggle)
 (global-set-key (kbd "C-.") 'bm-next)
 (global-set-key (kbd "C-,") 'bm-previous)
+
+;;; slamhound (Clojure)
+(define-key nrepl-mode-map (kbd "C-s-9") 'slamhound) ; ほんとは C-s-o に設定したい
+(global-set-key (kbd "C-s-9") 'slamhound)
+
+;;; midje
+(define-key clojure-mode-map (kbd "C-c C-j") 'midje-visit-source)

@@ -36,7 +36,6 @@
   (after save-after-moccur-edit-buffer activate)
   (save-buffer))
 
-
 (setq helm-c-moccur-helm-idle-delay 0.1)
 
 ;;; バッファ情報をハイライト
