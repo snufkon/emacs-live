@@ -3,6 +3,7 @@
 (live-add-pack-lib "helm-descbinds")
 (live-add-pack-lib "color-moccur-20120811.2127")
 (live-add-pack-lib "helm-c-moccur-20130216.1417")
+(live-add-pack-lib "wgrep")
 
 (require 'helm-config)
 (require 'helm-ls-git)
@@ -92,3 +93,6 @@
     (let* ((default-directory topdir)
            (sources (helm-c-sources-git-project-for default-directory)))
       (helm-other-buffer sources "*helm git project*"))))
+
+;;; wgrep-helm
+(require 'wgrep-helm)
