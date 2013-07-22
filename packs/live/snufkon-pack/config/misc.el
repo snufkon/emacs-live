@@ -78,3 +78,10 @@
 (require 'server)
 (unless (server-running-p)
   (server-start))
+
+
+;;; Emacs の Command History を再起動後も有効にする
+;;; 参考: http://qiita.com/akisute3@github/items/4b489c0abbb39a5dcc45
+(setq desktop-globals-to-save '(extended-command-history))
+(setq desktop-files-not-to-save "")
+(desktop-save-mode 1)
