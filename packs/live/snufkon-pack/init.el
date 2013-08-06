@@ -22,6 +22,7 @@
 (live-load-config-file "elscreen-conf.el")
 (live-load-config-file "recentf-conf.el")
 (live-load-config-file "org-mode-conf.el")
+(live-load-config-file "ruby-mode-conf.el")
 (live-load-config-file "misc.el")
 (live-load-config-file "bindings.el")
 
