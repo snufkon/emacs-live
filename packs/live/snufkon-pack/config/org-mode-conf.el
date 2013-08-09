@@ -16,3 +16,7 @@ C-uをつけると１レベル上、C-u C-uをつけると１レベル下の見�
     (4  (org-insert-subheading nil))	;C-u
     (16 (org-insert-upheading  nil))	;C-u C-u
     (t  (org-insert-heading    nil))))
+
+
+;;; タグ設定
+(setq org-tag-alist '(("@outside" . ?o) ("@book" . ?b)))
