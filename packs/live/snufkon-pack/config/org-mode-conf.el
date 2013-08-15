@@ -1,7 +1,8 @@
-(setq org-agenda-files (list "/Users/kondo/Dropbox/Emacs/org-file/gtd"))
+(setq org-directory "~/Dropbox/Emacs/org-file/gtd")
 
 ;;;; Emacs テクニックバイブル 14.2 ---------------------------------------------
 ; (require 'org)
+;; うまく動いていない
 (defun org-insert-upheading (org)
   "1レベル上の見出しを入力する。"
   (interactive "P")
@@ -20,3 +21,12 @@ C-uをつけると１レベル上、C-u C-uをつけると１レベル下の見�
 
 ;;; タグ設定
 (setq org-tag-alist '(("@outside" . ?o) ("@book" . ?b)))
+
+;;; org-capture の設定 ---------------------------------------------------------
+;; デフォルトファイルを指定
+(setq org-default-notes-file (concat org-directory "/main.org"))
+
+;; テンプレートを設定
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline nil "Inbox")
+         "** TODO %?\n  %i\n  %a")))
