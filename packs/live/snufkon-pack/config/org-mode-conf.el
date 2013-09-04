@@ -1,5 +1,9 @@
 (setq org-directory "~/Dropbox/Emacs/org-file/gtd")
 
+;;; TODO 状態をカスタマイズ
+(setq org-todo-keywords
+       '((sequence "TODO(t)" "WAIT(w)" "SOMEDAY(s)" "|" "DONE(d)")))
+
 ;;;; Emacs テクニックバイブル 14.2 ---------------------------------------------
 ; (require 'org)
 ;; うまく動いていない
@@ -20,7 +24,11 @@ C-uをつけると１レベル上、C-u C-uをつけると１レベル下の見�
 
 
 ;;; タグ設定
-(setq org-tag-alist '(("@outside" . ?o) ("@book" . ?b)))
+(setq org-tag-alist '(("amazon" . ?a)
+                      ("@outside" . ?o) ("@home" . ?h)             ; 場所
+                      ("pc" . ?p) ("iphone" . ?i) ("book" . ?b)    ; 必要なもの
+                      ("short" . ?s)                                ; かかる時間
+                      ))
 
 ;;; org-capture の設定 ---------------------------------------------------------
 ;; デフォルトファイルを指定
@@ -30,3 +38,6 @@ C-uをつけると１レベル上、C-u C-uをつけると１レベル下の見�
 (setq org-capture-templates
       '(("t" "Todo" entry (file+headline nil "Inbox")
          "** TODO %?\n  %i\n  %a")))
+
+;;; ファイル読み込み時、折り畳まない
+(setq org-startup-folded nil)
